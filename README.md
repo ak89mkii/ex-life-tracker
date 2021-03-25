@@ -1,5 +1,10 @@
 # Ex-Life Tracker App
 
+![alt text](src/Img/01.png)
+
+## Technologies:
+- React.js
+
 ## References:
 // https://scotch.io/@micwanyoike/how-to-add-fonts-to-a-react-project
 // https://react.semantic-ui.com/modules/progress/#content-progress
