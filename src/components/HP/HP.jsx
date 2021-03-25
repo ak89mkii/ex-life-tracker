@@ -2,14 +2,15 @@ import React, { Component, createRef } from 'react'
 import { Progress, Container, Grid, Card, Button, Message } from 'semantic-ui-react'
 import '../../App.css';
 import ko from '../../Img/ko.png';
+import Clock from '../Clock/Clock.jsx'
 
 const HP = () => {
     return (
         <Container>
-                    <div className="center">
-                        <img className="ko" src={ko} />
-                    </div>
-                
+            <div className="center">
+                 <img className="ko" src={ko} />
+            </div>
+            <Clock />
             <Grid columns='equal'>
                 <Grid.Column> 
                     <h1 className="label">HP</h1>

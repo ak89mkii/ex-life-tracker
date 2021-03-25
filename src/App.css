@@ -67,6 +67,10 @@
   float: right;
 }
 
+.clock {
+  text-align: center;
+}
+
 .ko {
   display: block;
   margin-left: auto;

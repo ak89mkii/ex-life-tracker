@@ -3,6 +3,7 @@ import { Jumbotron, Card, Button } from 'react-bootstrap';
 import '../../App.css';
 import EX from '../EX/EX';
 import HP from '../HP/HP.jsx';
+import Clock from '../Clock/Clock.jsx';
 
 const Stage = () => {
     return (
