@@ -28,6 +28,52 @@
   color: #61dafb;
 }
 
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  text-align: center;
+  background-color: slategrey;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.labelRight {
+  font-family: 'Press Start 2P', cursive;
+  text-align: right;
+}
+
+.barMirror {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  text-align: center;
+}
+
+.right {
+  float: left;
+}
+
+.left {
+  float: right;
+}
+
+.ko {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +82,4 @@
     transform: rotate(360deg);
   }
 }
+

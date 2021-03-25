@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { Component, createRef } from 'react'
 import './App.css';
+import './index.css';
+import 'semantic-ui-css/semantic.min.css';
+import Title from './components/Title/Title.jsx'
+import Stage from './components/Stage/Stage.jsx'
+import HP from './components/HP/HP.jsx';
+import EX from './components/EX/EX.jsx';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    
+  }
+
+  render() {
+    return (
+      <div> 
+        <Title />
+        <Stage />
+      </div>
+    )
+  }
 }
 
 export default App;
