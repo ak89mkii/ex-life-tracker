@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Segment, Header, TransitionablePortal, GridRow, } from 'semantic-ui-react'
+import { Button, Segment, Header, TransitionablePortal, Form, Checkbox } from 'semantic-ui-react'
 import '../../App.css';
 import fight from '../../Img/fight.png';
 
@@ -34,12 +34,41 @@ class Title extends Component {
                     />
                     <TransitionablePortal onClose={this.optionsClose} open={options}>
                     <Segment
-                        style={{ left: '50%', position: 'fixed', top: '10%', zIndex: 1000 }}
+                        style={{ left: '40%', position: 'fixed', top: '5%', zIndex: 1000 }}
                     >
-                        <Header>Technology List:</Header>
-                        <p>Row 01: HTML5, CSS3, JavaScript, Python 3</p>
-                        <p>Row 02: React.js, Node.js, Express.js, Django, MongoDB, PostreSQL</p>
-                        <p>Row 03: Materialize, Bootstrap, Semantic UI React, GitHub, Heroku, Coffee (the drink)</p>
+                        <Header>Options</Header>
+                        <Form>
+                            <Form.Group widths='equal'>
+                                <Form.Field>
+                                    <label>Player One:</label>
+                                    <input placeholder='Name of Character' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>HP:</label>
+                                    <input placeholder='HP Max Value' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>EX:</label>
+                                    <input placeholder='EX Max Value' />
+                                </Form.Field>
+                                <Button type='submit'>Submit</Button>
+                            </Form.Group>
+                            <Form.Group widths='equal'>
+                                <Form.Field>
+                                    <label>Player Two:</label>
+                                    <input placeholder='Name of Character' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>HP:</label>
+                                    <input placeholder='HP Max Value' />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>EX:</label>
+                                    <input placeholder='EX Max Value' />
+                                </Form.Field>
+                                <Button type='submit'>Submit</Button>
+                            </Form.Group>
+                        </Form>
                     </Segment>
                     </TransitionablePortal>
                 </div>
