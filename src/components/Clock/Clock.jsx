@@ -20,11 +20,11 @@ setInterval(()=>this.currentTime(),1000)
 }
   
     render() {
-      return (
-        <div className="center"> 
-          {this.state.time.toLocaleTimeString()}
-        </div>
-      )
+        return (
+            <div className="center"> 
+                {this.state.time.toLocaleTimeString()}
+            </div>
+        )
     }
 }
 
