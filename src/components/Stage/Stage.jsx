@@ -9,7 +9,6 @@ const Stage = () => {
     return (
         <Card>
             <Jumbotron>
-                <HP />
                 <br></br>
                 <br></br>
                 {/* <img 
