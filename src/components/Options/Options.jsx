@@ -2,6 +2,8 @@ import React, { Component, createRef } from 'react'
 import { Segment, Container, Form, Header, Button, TransitionablePortal } from 'semantic-ui-react'
 import '../../App.css';
 import HP from '../HP/HP.jsx'
+import EX from '../EX/EX.jsx'
+import Stage from '../Stage/Stage.jsx'
 
 class Options extends Component {
     constructor(props) {
@@ -93,10 +95,11 @@ class Options extends Component {
                         hP1={this.state.hP1} 
                         hP2={this.state.hP2}
                     />
-                    {/* <EX 
-                        p1={this.state.p1} 
-                        p2={this.state.p2}
-                    /> */}
+                    <Stage />
+                    <EX 
+                        eP1={this.state.eP1} 
+                        eP2={this.state.eP2}
+                    />
                 </Segment>
             </Container>
         )

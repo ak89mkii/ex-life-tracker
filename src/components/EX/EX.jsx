@@ -2,7 +2,11 @@ import React, { Component, createRef } from 'react'
 import { Progress, Container, Grid, Button, } from 'semantic-ui-react'
 import '../../App.css';
 
-const EX = () => {
+class EX extends Component {
+    state = {
+    }
+
+    render () {
     return (
         <Container>
             <Grid columns='equal'>
@@ -16,7 +20,7 @@ const EX = () => {
                         <Button.Or />
                         <Button color="grey">-</Button>
                     </Button.Group>
-                    <h1 className="label">9/10</h1>
+                    <h1 className="label">9/{this.props.eP1}</h1>
                 </Grid.Column>
 
                 <Grid.Column>
@@ -29,11 +33,12 @@ const EX = () => {
                         <Button.Or />
                         <Button color="blue">+</Button>
                     </Button.Group>
-                    <h1 className="labelRight">1/10</h1>
+                    <h1 className="labelRight">1/{this.props.eP2}</h1>
                 </Grid.Column>
             </Grid>
         </Container>
         )
     }
+}
 
 export default EX
