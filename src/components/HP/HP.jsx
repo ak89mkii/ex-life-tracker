@@ -3,7 +3,7 @@ import { Progress, Container, Grid, Card, Button, Message } from 'semantic-ui-re
 import '../../App.css';
 import ko from '../../Img/ko.png';
 import Clock from '../Clock/Clock.jsx'
-import Name from '../Name/Name.jsx'
+import Name from '../Options/Options.jsx'
 import Audio from '../../sounds/ko.wav'
 import ReactHowler from 'react-howler'
 
