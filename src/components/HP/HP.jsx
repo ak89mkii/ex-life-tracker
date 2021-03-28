@@ -3,6 +3,7 @@ import { Progress, Container, Grid, Card, Button, Message } from 'semantic-ui-re
 import '../../App.css';
 import ko from '../../Img/ko.png';
 import Clock from '../Clock/Clock.jsx'
+import Name from '../Name/Name.jsx'
 import Audio from '../../sounds/ko.wav'
 import ReactHowler from 'react-howler'
 
@@ -10,7 +11,8 @@ import ReactHowler from 'react-howler'
 class HP extends Component {
     state = {
       ko: true,
-      onMusic: false
+      p1: 'Ryu',
+      p2: 'Guile',
     }
 
     handleKO = () => {
@@ -32,6 +34,7 @@ class HP extends Component {
                 <Clock />
                 <Grid columns='equal'>
                     <Grid.Column> 
+                        <h1 className="label">{this.state.p1}</h1>
                         <h1 className="label">HP</h1>
                         <div className="barMirror">
                             <Progress percent={90} size='large' color='yellow' active />
@@ -42,10 +45,10 @@ class HP extends Component {
                             <Button color="red">-</Button>
                         </Button.Group>
                         <h1 className="label">18/20</h1>
-                        <h1 className="label">Ryu</h1>
                     </Grid.Column>
                 
                     <Grid.Column>
+                        <h1 className="labelRight">{this.state.p2}</h1>
                         <h1 className="labelRight">HP</h1>
                         <div className="bar">
                             <Progress percent={50} size='large' color='yellow' active />
@@ -56,7 +59,6 @@ class HP extends Component {
                             <Button color="yellow">+</Button>
                         </Button.Group>
                         <h1 className="labelRight">10/20</h1>
-                        <h1 className="labelRight">Guile</h1>
                     </Grid.Column>
                 </Grid>
             </Container>
