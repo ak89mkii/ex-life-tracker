@@ -10,6 +10,8 @@ import ReactHowler from 'react-howler'
 class HP extends Component {
     state = {
       ko: true,
+      p1Bar: this.props.hP1,
+      p2Bar: this.props.hP2,
     }
 
     handleKO = () => {
@@ -18,7 +20,33 @@ class HP extends Component {
         })
     }
 
+    pNewP1Bar = () => {
+        this.setState({
+            p1Bar: this.props.hP1
+        })
+    }
+
+    mNewP1Bar = () => {
+        this.setState({
+            p1Bar: this.state.p1Bar - 1
+        })
+    }
+
+    pNewP2Bar = () => {
+        this.setState({
+            p2Bar: this.props.hP2
+        })
+    }
+
+    mNewP2Bar = () => {
+        this.setState({
+            p2Bar: this.state.p2Bar - 1
+        })
+    }
+
     render() {
+        const {p1Bar} = this.state
+        const {p2Bar} = this.state
         return (
             <Container>
                 {/* {this.state.ko && (<ReactHowler
@@ -35,28 +63,40 @@ class HP extends Component {
                         <h1 className="label">P1: {this.props.oP1}</h1>
                         <h1 className="label">HP</h1>
                         <div className="barMirror">
-                            <Progress percent={90} size='large' color='yellow' active />
+                            <Progress 
+                                value={p1Bar} 
+                                total={this.props.hP1}
+                                size='large' 
+                                color='yellow' 
+                                active 
+                            />
                         </div>
                         <Button.Group className="left">
-                            <Button color="yellow">+</Button>
+                            <Button onClick={this.pNewP1Bar} color="yellow">+</Button>
                             <Button.Or />
-                            <Button color="red">-</Button>
+                            <Button onClick={this.mNewP1Bar} color="red">-</Button>
                         </Button.Group>
-                        <h1 className="label">18/{this.props.hP1}</h1>
+                        <h1 className="label">{this.props.hP1}/{this.props.hP1}</h1>
                     </Grid.Column>
                 
                     <Grid.Column>
                         <h1 className="labelRight">{this.props.oP2} :P2</h1>
                         <h1 className="labelRight">HP</h1>
                         <div className="bar">
-                            <Progress percent={50} size='large' color='yellow' active />
+                            <Progress 
+                                value={p2Bar} 
+                                total={this.props.hP2} 
+                                size='large' 
+                                color='yellow' 
+                                active 
+                            />
                         </div>
                         <Button.Group className="right">
-                            <Button color="red">-</Button>
+                            <Button onClick={this.mNewP2Bar} color="red">-</Button>
                             <Button.Or />
-                            <Button color="yellow">+</Button>
+                            <Button onClick={this.pNewP2Bar} color="yellow">+</Button>
                         </Button.Group>
-                        <h1 className="labelRight">10/{this.props.hP2}</h1>
+                        <h1 className="labelRight">{this.props.hP2}/{this.props.hP2}</h1>
                     </Grid.Column>
                 </Grid>
             </Container>

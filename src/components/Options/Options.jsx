@@ -20,7 +20,7 @@ class Options extends Component {
     optionsClose = () => this.setState({ options: false })
 
     // Player 01 Data:
-    optionsP1 = (event) => this.setState({ oP1: event.target.value});
+    optionsP1 = (event) => this.setState({ oP1: event.target.value})
     hPP1 = (event) => this.setState({ hP1: event.target.value});
     eXP1 = (event) => this.setState({ eP1: event.target.value});
     // Player 02 Data:
@@ -49,18 +49,23 @@ class Options extends Component {
                                 <Form.Field>
                                     <label>Player One:</label>
                                     <input 
-                                        onChange={this.optionsP1} placeholder='Name of Character'
+                                        onChange={this.optionsP1} 
+                                        placeholder='Name of Character'
                                     />
                                 </Form.Field>
                                 <Form.Field>
                                     <label>HP:</label>
                                     <input 
-                                        onChange={this.hPP1}placeholder='HP Max Value' />
+                                        onChange={this.hPP1}
+                                        placeholder='HP Max Value' 
+                                    />
                                 </Form.Field>
                                 <Form.Field>
                                     <label>EX:</label>
                                     <input 
-                                        onChange={this.eXP1}placeholder='EX Max Value' />
+                                        onChange={this.eXP1}
+                                        placeholder='EX Max Value' 
+                                    />
                                 </Form.Field>
                             </Form.Group>
                             <Form.Group widths='equal'>
@@ -74,12 +79,16 @@ class Options extends Component {
                                 <Form.Field>
                                     <label>HP:</label>
                                     <input 
-                                        onChange={this.hPP2}placeholder='HP Max Value' />
+                                        onChange={this.hPP2}
+                                        placeholder='HP Max Value' 
+                                    />
                                 </Form.Field>
                                 <Form.Field>
                                     <label>EX:</label>
                                     <input 
-                                        onChange={this.eXP2}placeholder='EX Max Value' />
+                                        onChange={this.eXP2}
+                                        placeholder='EX Max Value' 
+                                    />
                                 </Form.Field>
                             </Form.Group>
                         </Form>
@@ -94,6 +103,7 @@ class Options extends Component {
                         oP2={this.state.oP2}
                         hP1={this.state.hP1} 
                         hP2={this.state.hP2}
+
                     />
                     <Stage />
                     <EX 
