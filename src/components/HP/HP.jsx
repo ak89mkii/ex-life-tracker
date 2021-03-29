@@ -20,9 +20,16 @@ class HP extends Component {
         })
     }
 
-    pNewP1Bar = () => {
+    // P1 functions.
+    NewP1Bar = () => {
         this.setState({
             p1Bar: this.props.hP1
+        })
+    }
+
+    pNewP1Bar = () => {
+        this.setState({
+            p1Bar: this.state.p1Bar + 1
         })
     }
 
@@ -32,9 +39,16 @@ class HP extends Component {
         })
     }
 
-    pNewP2Bar = () => {
+    // P2 functions.
+    NewP2Bar = () => {
         this.setState({
             p2Bar: this.props.hP2
+        })
+    }
+
+    pNewP2Bar = () => {
+        this.setState({
+            p1Bar: this.state.p1Bar + 1
         })
     }
 
@@ -72,11 +86,13 @@ class HP extends Component {
                             />
                         </div>
                         <Button.Group className="left">
+                            <Button onClick={this.NewP1Bar} color="black">Set</Button>
+                            <Button.Or />
                             <Button onClick={this.pNewP1Bar} color="yellow">+</Button>
                             <Button.Or />
                             <Button onClick={this.mNewP1Bar} color="red">-</Button>
                         </Button.Group>
-                        <h1 className="label">{this.props.hP1}/{this.props.hP1}</h1>
+                        <h1 className="label">{p1Bar}/{this.props.hP1}</h1>
                     </Grid.Column>
                 
                     <Grid.Column>
@@ -95,8 +111,10 @@ class HP extends Component {
                             <Button onClick={this.mNewP2Bar} color="red">-</Button>
                             <Button.Or />
                             <Button onClick={this.pNewP2Bar} color="yellow">+</Button>
+                            <Button.Or />
+                            <Button onClick={this.NewP2Bar} color="black">Set</Button>
                         </Button.Group>
-                        <h1 className="labelRight">{this.props.hP2}/{this.props.hP2}</h1>
+                        <h1 className="labelRight">{p2Bar}/{this.props.hP2}</h1>
                     </Grid.Column>
                 </Grid>
             </Container>
