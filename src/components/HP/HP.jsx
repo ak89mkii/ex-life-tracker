@@ -86,7 +86,7 @@ class HP extends Component {
                             />
                         </div>
                         <Button.Group className="left">
-                            <Button onClick={this.NewP1Bar} color="black">Set</Button>
+                            <Button onClick={this.NewP1Bar} basic color="black">Set</Button>
                             <Button.Or />
                             <Button onClick={this.pNewP1Bar} color="yellow">+</Button>
                             <Button.Or />
@@ -112,7 +112,7 @@ class HP extends Component {
                             <Button.Or />
                             <Button onClick={this.pNewP2Bar} color="yellow">+</Button>
                             <Button.Or />
-                            <Button onClick={this.NewP2Bar} color="black">Set</Button>
+                            <Button onClick={this.NewP2Bar} basic color="black">Set</Button>
                         </Button.Group>
                         <h1 className="labelRight">{p2Bar}/{this.props.hP2}</h1>
                     </Grid.Column>
