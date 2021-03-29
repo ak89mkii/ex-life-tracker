@@ -9,14 +9,14 @@ import ReactHowler from 'react-howler'
 
 class HP extends Component {
     state = {
-      ko: true,
+      ko: false,
       p1Bar: this.props.hP1,
       p2Bar: this.props.hP2,
     }
 
     handleKO = () => {
         this.setState({
-            ko: this.state.ko
+            ko: true
         })
     }
 
@@ -29,13 +29,15 @@ class HP extends Component {
 
     pNewP1Bar = () => {
         this.setState({
-            p1Bar: this.state.p1Bar + 1
+            p1Bar: this.state.p1Bar + 1,
+            ko: false
         })
     }
 
     mNewP1Bar = () => {
         this.setState({
-            p1Bar: this.state.p1Bar - 1
+            p1Bar: this.state.p1Bar - 1,
+            ko: false
         })
     }
 
@@ -48,13 +50,15 @@ class HP extends Component {
 
     pNewP2Bar = () => {
         this.setState({
-            p2Bar: this.state.p2Bar + 1
+            p2Bar: this.state.p2Bar + 1,
+            ko: false
         })
     }
 
     mNewP2Bar = () => {
         this.setState({
-            p2Bar: this.state.p2Bar - 1
+            p2Bar: this.state.p2Bar - 1,
+            ko: false
         })
     }
 
@@ -63,10 +67,10 @@ class HP extends Component {
         const {p2Bar} = this.state
         return (
             <Container>
-                {/* {this.state.ko && (<ReactHowler
+                {this.state.ko && (<ReactHowler
                 src={Audio}
                 playing={true}
-                />)} */}
+                />)}
                 <div className="center">
                     <img onClick={this.handleKO} className="ko" src={ko} />
                 </div>
