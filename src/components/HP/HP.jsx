@@ -48,7 +48,7 @@ class HP extends Component {
 
     pNewP2Bar = () => {
         this.setState({
-            p1Bar: this.state.p1Bar + 1
+            p2Bar: this.state.p2Bar + 1
         })
     }
 
