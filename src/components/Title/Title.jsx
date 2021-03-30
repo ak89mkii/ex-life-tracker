@@ -25,7 +25,6 @@ class Title extends Component {
                         className="d-inline-block align-center"
                     />
                 </div>
-                <Options />
             </div>
         )
     }
