@@ -1,6 +1,6 @@
 # Ex-Life Tracker App
 
-![alt text](src/Img/01.png)
+![alt text](src/Img/02.png)
 
 ## Technologies:
 - React.js
