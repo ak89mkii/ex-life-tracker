@@ -4,6 +4,11 @@
 
 ## Technologies:
 - React.js
+- JavaScript (EchmaScript 2018)
+- HTML5
+- CSS3
+- Semantic UI React
+- Howler
 
 ## References:
 ### Information:
@@ -17,3 +22,6 @@
 // https://thenounproject.com/term/fireball/1112042/
 ### Sounds:
 // https://freesound.org/search/?q=KO+fight&f=type%3A%22wav%22&s=score+desc&advanced=0&g=1
+// https://freesound.org/people/Taira%20Komori/sounds/214211/
+// https://freesound.org/people/ProjectsU012/sounds/341695/
+// https://freesound.org/people/Syna-Max/sounds/64939/
