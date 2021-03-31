@@ -3,7 +3,7 @@ import { Container, Form, Input, Button } from 'semantic-ui-react';
 
 class Stage extends Component {
     state = {
-        value: "https://www.youtube.com/embed/3BqCWBbkvy8"
+        value: "https://www.youtube.com/embed/Ceedgl2wKbg"
     }
 
     
@@ -24,14 +24,14 @@ class Stage extends Component {
                     <div className="center">
                         <iframe className="player" src={value} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <br></br>
-                        <Form>
+                        <Form.Group widths='equal'>
                             <Input 
-                                label='Add Embed Address:' 
+                                label='Embed:' 
                                 placeholder='Add Here'  
                                 value={this.state.value}
                                 onChange={this.handleChange}
                             />
-                        </Form>
+                        </Form.Group>
                     </div>
                     <br></br>
                     <br></br>

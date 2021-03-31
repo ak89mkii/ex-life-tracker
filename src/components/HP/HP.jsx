@@ -4,19 +4,25 @@ import '../../App.css';
 import ko from '../../Img/ko.png';
 import Clock from '../Clock/Clock.jsx'
 import Audio from '../../sounds/ko.wav'
+import Heal from '../../sounds/heal.wav'
+import Damage from '../../sounds/damage.mp3'
 import ReactHowler from 'react-howler'
 
 
 class HP extends Component {
     state = {
       ko: false,
+      heal: false,
+      damage: false,
       p1Bar: this.props.hP1,
       p2Bar: this.props.hP2,
     }
 
     handleKO = () => {
         this.setState({
-            ko: true
+            ko: true,
+            heal: false,
+            damage: false
         })
     }
 
@@ -30,14 +36,18 @@ class HP extends Component {
     pNewP1Bar = () => {
         this.setState({
             p1Bar: this.state.p1Bar + 1,
-            ko: false
+            ko: false,
+            heal: true,
+            damage: false
         })
     }
 
     mNewP1Bar = () => {
         this.setState({
             p1Bar: this.state.p1Bar - 1,
-            ko: false
+            ko: false,
+            heal: false,
+            damage: true
         })
     }
 
@@ -51,14 +61,18 @@ class HP extends Component {
     pNewP2Bar = () => {
         this.setState({
             p2Bar: this.state.p2Bar + 1,
-            ko: false
+            ko: false,
+            heal: true,
+            damage: false
         })
     }
 
     mNewP2Bar = () => {
         this.setState({
             p2Bar: this.state.p2Bar - 1,
-            ko: false
+            ko: false,
+            heal: false,
+            damage: true
         })
     }
 
@@ -69,6 +83,14 @@ class HP extends Component {
             <Container>
                 {this.state.ko && (<ReactHowler
                 src={Audio}
+                playing={true}
+                />)}
+                {this.state.heal && (<ReactHowler
+                src={Heal}
+                playing={true}
+                />)}
+                {this.state.damage && (<ReactHowler
+                src={Damage}
                 playing={true}
                 />)}
                 <div className="center">
