@@ -4,19 +4,22 @@ import '../../App.css';
 import HP from '../HP/HP.jsx'
 import EX from '../EX/EX.jsx'
 import Stage from '../Stage/Stage.jsx'
+import Buttons from '../Buttons/Buttons.jsx'
 
 class Options extends Component {
     constructor(props) {
         super(props);
         this.state = { p1: '' };
         this.state = { p2: '' };
+        this.state = {options: false}
+
     }
 
     state = {
-        options: false,
+        options: !false,
     }
 
-    optionsOpen = () => this.setState((prevState) => ({ options: !prevState.options }))
+    optionsOpen = () => this.setState({ options: true })
     optionsClose = () => this.setState({ options: false })
 
     // Player 01 Data:
@@ -33,13 +36,19 @@ class Options extends Component {
         return (
             <Container>
                 <div className="center"> 
-                    <Button 
-                        size='huge' 
-                        color="black" 
-                        icon='settings'
-                        onClick={this.optionsOpen}
-                    />
-                    <TransitionablePortal onClose={this.optionsClose} open={options}>
+                    <TransitionablePortal closeOnTriggerClick
+                        onOpen={this.optionsOpen}
+                        onClose={this.optionsClose}
+                        openOnTriggerClick
+                        trigger={
+                            <Button
+                            content={options ? 'Close Options' : 'Open Options'}
+                            secondary={options}
+                            secondary={!options}
+                            />
+                        }
+                    >     
+
                     <Segment
                         style={{ left: '40%', position: 'fixed', top: '5%', zIndex: 1000 }}
                     >

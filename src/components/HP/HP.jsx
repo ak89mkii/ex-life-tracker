@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { Progress, Container, Grid, Card, Button, Message, Segment } from 'semantic-ui-react'
+import { Progress, Container, Grid, Icon, Button, Message, Segment } from 'semantic-ui-react'
 import '../../App.css';
 import ko from '../../Img/ko.png';
 import Clock from '../Clock/Clock.jsx'
@@ -76,6 +76,14 @@ class HP extends Component {
         })
     }
 
+    soundOff = () => {
+        this.setState({
+            ko: false,
+            heal: false,
+            damage: false
+        })
+    }
+
     render() {
         const {p1Bar} = this.state
         const {p2Bar} = this.state
@@ -84,19 +92,31 @@ class HP extends Component {
                 {this.state.ko && (<ReactHowler
                 src={Audio}
                 playing={true}
+                onEnd={this.soundOff}
                 />)}
                 {this.state.heal && (<ReactHowler
                 src={Heal}
                 playing={true}
+                onEnd={this.soundOff}
                 />)}
                 {this.state.damage && (<ReactHowler
                 src={Damage}
                 playing={true}
+                onEnd={this.soundOff}
                 />)}
+                <div className="center">
+                    <Button onClick={this.soundOff}>
+                        <Button.Content visible>
+                            <Icon name='volume off' />
+                        </Button.Content>
+                    </Button> 
+                </div>
+                <br></br>
                 <div className="center">
                     <img onClick={this.handleKO} className="ko" src={ko} />
                 </div>
                 <Clock />
+                <br></br>
                 <Grid columns='equal'>
                     <Grid.Column>
                         {/* Props from Options component. */}

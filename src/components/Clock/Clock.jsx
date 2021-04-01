@@ -21,7 +21,7 @@ setInterval(()=>this.currentTime(),1000)
   
     render() {
         return (
-            <div className="center"> 
+            <div className="clock"> 
                 {this.state.time.toLocaleTimeString()}
             </div>
         )
