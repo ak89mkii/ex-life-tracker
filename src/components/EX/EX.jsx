@@ -18,50 +18,56 @@ class EX extends Component {
     // P1 functions.
     NewP1Bar = () => {
         this.setState({
-            p1EBar: this.props.eP1
+            p1EBar: 0,
+            eUp: false,
+            eDown: false,
+            special: true,
         })
     }
   
     pNewP1Bar = () => {
         this.setState({
+            p1EBar: this.state.p1EBar + 1,
             eUp: true,
             eDown: false,
             special: false,
-            p1EBar: this.state.p1EBar + 1
         })
     }
   
     mNewP1Bar = () => {
           this.setState({
+            p1EBar: this.state.p1EBar - 1,
             eUp: false,
             eDown: true,
             special: false,
-            p1EBar: this.state.p1EBar - 1
         })
     }
   
     // P2 functions.
     NewP2Bar = () => {
         this.setState({
-            p2EBar: this.props.eP2
+            p2EBar: 0,
+            eUp: false,
+            eDown: false,
+            special: true,
         })
     }
   
     pNewP2Bar = () => {
         this.setState({
+            p2EBar: this.state.p2EBar + 1,
             eUp: true,
             eDown: false,
             special: false,
-            p2EBar: this.state.p2EBar + 1
         })
     }
   
     mNewP2Bar = () => {
         this.setState({
+            p2EBar: this.state.p2EBar - 1,
             eUp: false,
             eDown: true,
             special: false,
-            p2EBar: this.state.p2EBar - 1
         })
     }
 
@@ -106,6 +112,8 @@ class EX extends Component {
                             />
                         </div>
                         <Button.Group className="left">
+                            <Button onClick={this.NewP1Bar} basic color="black">EX</Button>
+                            <Button.Or />
                             <Button onClick={this.pNewP1Bar} color="blue">+</Button>
                             <Button.Or />
                             <Button onClick={this.mNewP1Bar} color="grey">-</Button>
@@ -128,6 +136,8 @@ class EX extends Component {
                             <Button onClick={this.mNewP2Bar} color="grey">-</Button>
                             <Button.Or />
                             <Button onClick={this.pNewP2Bar} color="blue">+</Button>
+                            <Button.Or />
+                            <Button onClick={this.NewP2Bar} basic color="black">EX</Button>
                         </Button.Group>
                         <h1 className="labelRight">{p2EBar}/{this.props.eP2}</h1>
                     </Grid.Column>
