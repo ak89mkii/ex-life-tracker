@@ -6,6 +6,7 @@ import Clock from '../Clock/Clock.jsx'
 import Audio from '../../sounds/ko.wav'
 import Heal from '../../sounds/heal.wav'
 import Damage from '../../sounds/damage.mp3'
+import SetButton from '../../sounds/scream.wav'
 import ReactHowler from 'react-howler'
 
 
@@ -14,6 +15,7 @@ class HP extends Component {
       ko: false,
       heal: false,
       damage: false,
+      set: false,
       p1Bar: this.props.hP1,
       p2Bar: this.props.hP2,
     }
@@ -29,7 +31,11 @@ class HP extends Component {
     // P1 functions.
     NewP1Bar = () => {
         this.setState({
-            p1Bar: this.props.hP1
+            p1Bar: this.props.hP1,
+            ko: false,
+            heal: false,
+            set: true,
+            damage: false
         })
     }
 
@@ -38,6 +44,7 @@ class HP extends Component {
             p1Bar: this.state.p1Bar + 1,
             ko: false,
             heal: true,
+            set: false,
             damage: false
         })
     }
@@ -47,6 +54,7 @@ class HP extends Component {
             p1Bar: this.state.p1Bar - 1,
             ko: false,
             heal: false,
+            set: false,
             damage: true
         })
     }
@@ -54,7 +62,11 @@ class HP extends Component {
     // P2 functions.
     NewP2Bar = () => {
         this.setState({
-            p2Bar: this.props.hP2
+            p2Bar: this.props.hP2,
+            ko: false,
+            heal: false,
+            set: true,
+            damage: false
         })
     }
 
@@ -63,6 +75,7 @@ class HP extends Component {
             p2Bar: this.state.p2Bar + 1,
             ko: false,
             heal: true,
+            set: false,
             damage: false
         })
     }
@@ -72,6 +85,7 @@ class HP extends Component {
             p2Bar: this.state.p2Bar - 1,
             ko: false,
             heal: false,
+            set: false,
             damage: true
         })
     }
@@ -80,7 +94,8 @@ class HP extends Component {
         this.setState({
             ko: false,
             heal: false,
-            damage: false
+            damage: false,
+            set: false,
         })
     }
 
@@ -104,13 +119,11 @@ class HP extends Component {
                 playing={true}
                 onEnd={this.soundOff}
                 />)}
-                <div className="center">
-                    <Button onClick={this.soundOff}>
-                        <Button.Content visible>
-                            <Icon name='volume off' />
-                        </Button.Content>
-                    </Button> 
-                </div>
+                {this.state.set && (<ReactHowler
+                src={SetButton}
+                playing={true}
+                onEnd={this.soundOff}
+                />)}
                 <br></br>
                 <div className="center">
                     <img onClick={this.handleKO} className="ko" src={ko} />

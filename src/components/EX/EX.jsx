@@ -1,9 +1,16 @@
 import React, { Component, createRef } from 'react'
 import { Progress, Container, Grid, Button, } from 'semantic-ui-react'
 import '../../App.css';
+import EUp from '../../sounds/up.wav'
+import EDown from '../../sounds/down.wav'
+import Special from '../../sounds/ex.wav'
+import ReactHowler from 'react-howler'
 
 class EX extends Component {
     state = {
+        eUp: false,
+        eDown: false,
+        special: false,
         p1EBar: 0,
         p2EBar: 0,
     }
@@ -17,12 +24,18 @@ class EX extends Component {
   
     pNewP1Bar = () => {
         this.setState({
+            eUp: true,
+            eDown: false,
+            special: false,
             p1EBar: this.state.p1EBar + 1
         })
     }
   
     mNewP1Bar = () => {
           this.setState({
+            eUp: false,
+            eDown: true,
+            special: false,
             p1EBar: this.state.p1EBar - 1
         })
     }
@@ -36,13 +49,27 @@ class EX extends Component {
   
     pNewP2Bar = () => {
         this.setState({
+            eUp: true,
+            eDown: false,
+            special: false,
             p2EBar: this.state.p2EBar + 1
         })
     }
   
     mNewP2Bar = () => {
         this.setState({
+            eUp: false,
+            eDown: true,
+            special: false,
             p2EBar: this.state.p2EBar - 1
+        })
+    }
+
+    soundOff = () => {
+        this.setState({
+            eUp: false,
+            eDown: false,
+            special: false,
         })
     }
   
@@ -51,6 +78,21 @@ class EX extends Component {
         const {p2EBar} = this.state
         return (
             <Container>
+                {this.state.eUp && (<ReactHowler
+                src={EUp}
+                playing={true}
+                onEnd={this.soundOff}
+                />)}
+                {this.state.eDown && (<ReactHowler
+                src={EDown}
+                playing={true}
+                onEnd={this.soundOff}
+                />)}
+                {this.state.special && (<ReactHowler
+                src={Special}
+                playing={true}
+                onEnd={this.soundOff}
+                />)}
                 <Grid columns='equal'>
                     <Grid.Column> 
                         <h1 className="label">EX</h1>

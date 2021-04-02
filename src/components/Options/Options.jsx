@@ -48,7 +48,6 @@ class Options extends Component {
                             />
                         }
                     >     
-
                     <Segment
                         style={{ left: '40%', position: 'fixed', top: '5%', zIndex: 1000 }}
                     >
