@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { Progress, Container, Grid, Icon, Button, Message, Segment } from 'semantic-ui-react'
+import { Progress, Container, Grid, Button } from 'semantic-ui-react'
 import '../../App.css';
 import ko from '../../Img/ko.png';
 import Clock from '../Clock/Clock.jsx'

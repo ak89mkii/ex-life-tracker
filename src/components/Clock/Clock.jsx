@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Progress, Container, Grid, Button, } from 'semantic-ui-react'
 import '../../App.css';
 
 class Clock extends Component {
