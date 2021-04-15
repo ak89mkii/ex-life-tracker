@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { Container, Form, Input, Button } from 'semantic-ui-react';
+import { Container, Form, Input } from 'semantic-ui-react';
 
 class Stage extends Component {
     state = {

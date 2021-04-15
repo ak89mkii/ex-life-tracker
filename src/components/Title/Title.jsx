@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Segment, Header, TransitionablePortal, Form, Checkbox } from 'semantic-ui-react'
 import '../../App.css';
-import Options from '../Options/Options.jsx';
 import fight from '../../Img/fight.png';
 
 class Title extends Component {

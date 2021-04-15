@@ -4,7 +4,6 @@ import '../../App.css';
 import HP from '../HP/HP.jsx'
 import EX from '../EX/EX.jsx'
 import Stage from '../Stage/Stage.jsx'
-import Buttons from '../Buttons/Buttons.jsx'
 
 class Options extends Component {
     constructor(props) {
