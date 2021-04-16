@@ -50,7 +50,7 @@ class Options extends Component {
                     <Segment
                         style={{ left: '40%', position: 'fixed', top: '5%', zIndex: 1000 }}
                     >
-                        <Header>Options</Header>
+                        <Header>- Options -</Header>
                         <Form>
                             <Form.Group widths='equal'>
                                 <Form.Field>
@@ -99,6 +99,15 @@ class Options extends Component {
                                 </Form.Field>
                             </Form.Group>
                         </Form>
+                        <Header>- Instructions -</Header>
+                        <h4>HP:</h4>
+                        <p>Press "Set" after adding values in options.</p>
+                        <h4>EX:</h4>
+                        <p>Press "EX" to reset meter.</p>
+                        <h4>+ / - Buttons:</h4>
+                        <p>Increments / decrements meter and counter by 1.</p>
+                        <h4>Embed Field:</h4>
+                        <p>On YouTube, click on 'SHARE", then Embed. After the "src", copy the URL within the quotation marks and paste it in the "Embed" field.</p>
                     </Segment>
                     </TransitionablePortal>
                 </div>
