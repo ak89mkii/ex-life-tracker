@@ -14,9 +14,9 @@ class Options extends Component {
 
     }
 
-    state = {
-        options: !false,
-    }
+    // state = {
+    //     options: !false,
+    // }
 
     optionsOpen = () => this.setState({ options: true })
     optionsClose = () => this.setState({ options: false })
