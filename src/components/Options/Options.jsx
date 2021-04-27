@@ -127,7 +127,7 @@ class Options extends Component {
                         eP2={this.state.eP2}
                     />
                 </Segment>
-                <p>Ponder Mint Code, Ponder Enterprises © 2021 / Icon Credits: Andrew Doane, Jonathan Coutiño, MX</p>
+                <p>Ponder Code, Ponder Enterprises © 2021 / Icon Credits: Andrew Doane, Jonathan Coutiño, MX</p>
             </Container>
         )
     }
