@@ -6,7 +6,7 @@ import Clock from '../Clock/Clock.jsx'
 import Audio from '../../sounds/ko.wav'
 import Heal from '../../sounds/heal.wav'
 import Damage from '../../sounds/damage.mp3'
-import SetButton from '../../sounds/scream.wav'
+import SetButton from '../../sounds/set.wav'
 import ReactHowler from 'react-howler'
 
 
